@@ -1,5 +1,10 @@
 # Splunk SOC Monitoring Lab
 
+Oluwaseyi Michael Falode | Cybersecurity & Cloud Security Engineer | Toronto, ON
+
+![Splunk](https://img.shields.io/badge/Splunk_Enterprise-SIEM-000000?style=flat&logo=splunk&logoColor=white)
+![SPL](https://img.shields.io/badge/SPL-Detection_and_Dashboards-65A637?style=flat)
+
 A hands-on Security Operations Centre analyst lab built in Splunk Enterprise — writing SPL queries, detecting threat patterns, building saved reports, configuring scheduled alerts, and assembling a live SOC dashboard from real log data.
 
 ---
@@ -100,12 +105,28 @@ index=main | timechart span=5m sum(kbps)
 
 ## Screenshots
 
+![SOC dashboard](screenshots/dashboard-full-view.png)
+
+![April 18 traffic burst timechart](screenshots/burst-traffic-timechart.png)
+
+![Weekly alert configuration](screenshots/weekly-alert-config.png)
+
 | File | What It Shows |
 |---|---|
-| `audit-filtered-by-host.png` | Audit log filtered and segmented by Splunk host |
-| `audit-search-activity.png` | User search activity across the audit index |
-| `burst-traffic-timechart.png` | Timechart showing the April 18 traffic spike |
-| `component-error-counts.png` | Error counts broken down by internal Splunk component |
+| [`dashboard-full-view.png`](screenshots/dashboard-full-view.png) | Full six-panel SOC dashboard |
+| [`dashboard-bar-area-ddos.png`](screenshots/dashboard-bar-area-ddos.png) | Dashboard bar and area panels showing the traffic burst |
+| [`dashboard-pie-singlevalue-bar.png`](screenshots/dashboard-pie-singlevalue-bar.png) | Dashboard pie, single-value KPI and bar panels |
+| [`dashboard-table-view.png`](screenshots/dashboard-table-view.png) | Dashboard table panel (top source IPs) |
+| [`burst-traffic-timechart.png`](screenshots/burst-traffic-timechart.png) | Timechart showing the April 18 traffic spike |
+| [`event-count-by-host.png`](screenshots/event-count-by-host.png) | Event volume broken down by host |
+| [`component-error-counts.png`](screenshots/component-error-counts.png) | Error counts by internal Splunk component |
+| [`internal-error-logs.png`](screenshots/internal-error-logs.png) | Internal error log search |
+| [`info-logs-host.png`](screenshots/info-logs-host.png) | INFO-level logs filtered by host |
+| [`ui-access-monitoring.png`](screenshots/ui-access-monitoring.png) | UI access events by user and path |
+| [`audit-search-activity.png`](screenshots/audit-search-activity.png) | User search activity across the audit index |
+| [`audit-filtered-by-host.png`](screenshots/audit-filtered-by-host.png) | Audit log filtered and segmented by host |
+| [`saved-reports-list.png`](screenshots/saved-reports-list.png) | The four saved reports |
+| [`weekly-alert-config.png`](screenshots/weekly-alert-config.png) | Weekly scheduled alert configuration (threshold > 1000 results) |
 
 ## How to Reproduce
 
